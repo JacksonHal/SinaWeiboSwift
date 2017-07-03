@@ -19,6 +19,7 @@
 		4DB747161F0A210B00F4E383 /* WBMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB747151F0A210B00F4E383 /* WBMineViewController.swift */; };
 		4DB747181F0A212000F4E383 /* WBDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB747171F0A212000F4E383 /* WBDiscoverViewController.swift */; };
 		4DB7471A1F0A244300F4E383 /* WBMainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB747191F0A244300F4E383 /* WBMainTabBarController.swift */; };
+		4DB747201F0A59B300F4E383 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB7471F1F0A59B300F4E383 /* Bundle+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		4DB747151F0A210B00F4E383 /* WBMineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBMineViewController.swift; sourceTree = "<group>"; };
 		4DB747171F0A212000F4E383 /* WBDiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBDiscoverViewController.swift; sourceTree = "<group>"; };
 		4DB747191F0A244300F4E383 /* WBMainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBMainTabBarController.swift; sourceTree = "<group>"; };
+		4DB7471F1F0A59B300F4E383 /* Bundle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,8 @@
 		4DB747031F0A1DEA00F4E383 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				4DB7471B1F0A542400F4E383 /* Addition */,
+				4DB7471C1F0A542400F4E383 /* Extension */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -218,6 +222,21 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4DB7471B1F0A542400F4E383 /* Addition */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Addition;
+			sourceTree = "<group>";
+		};
+		4DB7471C1F0A542400F4E383 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4DB7471F1F0A59B300F4E383 /* Bundle+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DB747181F0A212000F4E383 /* WBDiscoverViewController.swift in Sources */,
+				4DB747201F0A59B300F4E383 /* Bundle+Extension.swift in Sources */,
 				4DB747161F0A210B00F4E383 /* WBMineViewController.swift in Sources */,
 				4DB747101F0A20BE00F4E383 /* WBBaseViewController.swift in Sources */,
 				4DB746D41F09E92A00F4E383 /* AppDelegate.swift in Sources */,
