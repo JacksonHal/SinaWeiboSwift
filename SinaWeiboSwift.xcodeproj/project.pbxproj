@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		4DB746D41F09E92A00F4E383 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB746D31F09E92A00F4E383 /* AppDelegate.swift */; };
-		4DB746D61F09E92A00F4E383 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB746D51F09E92A00F4E383 /* ViewController.swift */; };
-		4DB746D91F09E92A00F4E383 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB746D71F09E92A00F4E383 /* Main.storyboard */; };
 		4DB746DB1F09E92A00F4E383 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB746DA1F09E92A00F4E383 /* Assets.xcassets */; };
 		4DB746DE1F09E92A00F4E383 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB746DC1F09E92A00F4E383 /* LaunchScreen.storyboard */; };
 		4DB746E91F09E92A00F4E383 /* SinaWeiboSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB746E81F09E92A00F4E383 /* SinaWeiboSwiftTests.swift */; };
 		4DB746F41F09E92A00F4E383 /* SinaWeiboSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB746F31F09E92A00F4E383 /* SinaWeiboSwiftUITests.swift */; };
+		4DB7470E1F0A206300F4E383 /* WBNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB7470D1F0A206300F4E383 /* WBNavigationViewController.swift */; };
+		4DB747101F0A20BE00F4E383 /* WBBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB7470F1F0A20BE00F4E383 /* WBBaseViewController.swift */; };
+		4DB747121F0A20EB00F4E383 /* WBHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB747111F0A20EB00F4E383 /* WBHomeViewController.swift */; };
+		4DB747141F0A210000F4E383 /* WBMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB747131F0A210000F4E383 /* WBMessageViewController.swift */; };
+		4DB747161F0A210B00F4E383 /* WBMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB747151F0A210B00F4E383 /* WBMineViewController.swift */; };
+		4DB747181F0A212000F4E383 /* WBDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB747171F0A212000F4E383 /* WBDiscoverViewController.swift */; };
+		4DB7471A1F0A244300F4E383 /* WBMainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB747191F0A244300F4E383 /* WBMainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +41,6 @@
 /* Begin PBXFileReference section */
 		4DB746D01F09E92A00F4E383 /* SinaWeiboSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SinaWeiboSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DB746D31F09E92A00F4E383 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4DB746D51F09E92A00F4E383 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4DB746D81F09E92A00F4E383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4DB746DA1F09E92A00F4E383 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DB746DD1F09E92A00F4E383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DB746DF1F09E92A00F4E383 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +50,13 @@
 		4DB746EF1F09E92A00F4E383 /* SinaWeiboSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SinaWeiboSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DB746F31F09E92A00F4E383 /* SinaWeiboSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinaWeiboSwiftUITests.swift; sourceTree = "<group>"; };
 		4DB746F51F09E92A00F4E383 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DB7470D1F0A206300F4E383 /* WBNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNavigationViewController.swift; sourceTree = "<group>"; };
+		4DB7470F1F0A20BE00F4E383 /* WBBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBBaseViewController.swift; sourceTree = "<group>"; };
+		4DB747111F0A20EB00F4E383 /* WBHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBHomeViewController.swift; sourceTree = "<group>"; };
+		4DB747131F0A210000F4E383 /* WBMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBMessageViewController.swift; sourceTree = "<group>"; };
+		4DB747151F0A210B00F4E383 /* WBMineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBMineViewController.swift; sourceTree = "<group>"; };
+		4DB747171F0A212000F4E383 /* WBDiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBDiscoverViewController.swift; sourceTree = "<group>"; };
+		4DB747191F0A244300F4E383 /* WBMainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBMainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +107,8 @@
 		4DB746D21F09E92A00F4E383 /* SinaWeiboSwift */ = {
 			isa = PBXGroup;
 			children = (
+				4DB747011F0A1DEA00F4E383 /* Class */,
 				4DB746D31F09E92A00F4E383 /* AppDelegate.swift */,
-				4DB746D51F09E92A00F4E383 /* ViewController.swift */,
-				4DB746D71F09E92A00F4E383 /* Main.storyboard */,
 				4DB746DA1F09E92A00F4E383 /* Assets.xcassets */,
 				4DB746DC1F09E92A00F4E383 /* LaunchScreen.storyboard */,
 				4DB746DF1F09E92A00F4E383 /* Info.plist */,
@@ -123,6 +132,92 @@
 				4DB746F51F09E92A00F4E383 /* Info.plist */,
 			);
 			path = SinaWeiboSwiftUITests;
+			sourceTree = "<group>";
+		};
+		4DB747011F0A1DEA00F4E383 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				4DB747031F0A1DEA00F4E383 /* Tools */,
+				4DB747021F0A1DEA00F4E383 /* Model */,
+				4DB747041F0A1DEA00F4E383 /* View(view&ViewController) */,
+				4DB7470A1F0A1DEA00F4E383 /* ViewModel */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		4DB747021F0A1DEA00F4E383 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4DB747031F0A1DEA00F4E383 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		4DB747041F0A1DEA00F4E383 /* View(view&ViewController) */ = {
+			isa = PBXGroup;
+			children = (
+				4DB747051F0A1DEA00F4E383 /* Discover */,
+				4DB747061F0A1DEA00F4E383 /* Home */,
+				4DB747071F0A1DEA00F4E383 /* Main */,
+				4DB747081F0A1DEA00F4E383 /* Message */,
+				4DB747091F0A1DEA00F4E383 /* Mine */,
+			);
+			path = "View(view&ViewController)";
+			sourceTree = "<group>";
+		};
+		4DB747051F0A1DEA00F4E383 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				4DB747171F0A212000F4E383 /* WBDiscoverViewController.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		4DB747061F0A1DEA00F4E383 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4DB747111F0A20EB00F4E383 /* WBHomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		4DB747071F0A1DEA00F4E383 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				4DB747191F0A244300F4E383 /* WBMainTabBarController.swift */,
+				4DB7470D1F0A206300F4E383 /* WBNavigationViewController.swift */,
+				4DB7470F1F0A20BE00F4E383 /* WBBaseViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		4DB747081F0A1DEA00F4E383 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				4DB747131F0A210000F4E383 /* WBMessageViewController.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		4DB747091F0A1DEA00F4E383 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				4DB747151F0A210B00F4E383 /* WBMineViewController.swift */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		4DB7470A1F0A1DEA00F4E383 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +282,7 @@
 		4DB746C81F09E92A00F4E383 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = WB;
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "好杰";
@@ -237,7 +333,6 @@
 			files = (
 				4DB746DE1F09E92A00F4E383 /* LaunchScreen.storyboard in Resources */,
 				4DB746DB1F09E92A00F4E383 /* Assets.xcassets in Resources */,
-				4DB746D91F09E92A00F4E383 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,8 +357,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DB746D61F09E92A00F4E383 /* ViewController.swift in Sources */,
+				4DB747181F0A212000F4E383 /* WBDiscoverViewController.swift in Sources */,
+				4DB747161F0A210B00F4E383 /* WBMineViewController.swift in Sources */,
+				4DB747101F0A20BE00F4E383 /* WBBaseViewController.swift in Sources */,
 				4DB746D41F09E92A00F4E383 /* AppDelegate.swift in Sources */,
+				4DB747121F0A20EB00F4E383 /* WBHomeViewController.swift in Sources */,
+				4DB7471A1F0A244300F4E383 /* WBMainTabBarController.swift in Sources */,
+				4DB7470E1F0A206300F4E383 /* WBNavigationViewController.swift in Sources */,
+				4DB747141F0A210000F4E383 /* WBMessageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,14 +400,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4DB746D71F09E92A00F4E383 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4DB746D81F09E92A00F4E383 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4DB746DC1F09E92A00F4E383 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -415,8 +508,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = GNZBVV9WD3;
 				INFOPLIST_FILE = SinaWeiboSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.HHJ.SinaWeiboSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -428,8 +523,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = GNZBVV9WD3;
 				INFOPLIST_FILE = SinaWeiboSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.HHJ.SinaWeiboSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -514,6 +611,7 @@
 				4DB746FA1F09E92A00F4E383 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4DB746FB1F09E92A00F4E383 /* Build configuration list for PBXNativeTarget "SinaWeiboSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +620,7 @@
 				4DB746FD1F09E92A00F4E383 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4DB746FE1F09E92A00F4E383 /* Build configuration list for PBXNativeTarget "SinaWeiboSwiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +629,7 @@
 				4DB747001F09E92A00F4E383 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
