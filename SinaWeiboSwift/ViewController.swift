@@ -1,9 +1,9 @@
 //
 //  ViewController.swift
-//  SinaSwift
+//  SinaWeiboSwift
 //
-//  Created by 郝好杰 on 2017/7/2.
-//  Copyright © 2017年 HHJ. All rights reserved.
+//  Created by meixiang02 on 2017/7/3.
+//  Copyright © 2017年 好杰. All rights reserved.
 //
 
 import UIKit
