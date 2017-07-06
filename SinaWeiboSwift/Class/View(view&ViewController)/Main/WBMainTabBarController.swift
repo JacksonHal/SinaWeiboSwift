@@ -27,8 +27,11 @@ extension WBMainTabBarController {
     
     //设置所有的控制器
      func setupChildViewControllers() {
-        let array = [["clsName":"WBHomeViewController", "title":"首页", "imageName":"hehe"]
-        
+        let array = [
+            ["clsName":"WBHomeViewController", "title":"首页", "imageName":"tabbar_home"],
+            ["clsName":"WBMessageViewController", "title":"消息", "imageName":"tabbar_message_center" ],
+            ["clsName":"WBDiscoverViewController", "title":"发现", "imageName":"tabbar_discover"],
+            ["clsName":"WBMineViewController", "title":"我", "imageName":"tabbar_profile", "selectImageName":"tabbar_profile_highlighted"]
         ]
         var mArray = [UIViewController]()
         for dict in array {
@@ -52,9 +55,24 @@ extension WBMainTabBarController {
                 return UIViewController();
         }
         
+        //创建控制器
         let vc = cls.init()
         vc.title = title
+        
+        //创建navigationController
         let nav = WBNavigationViewController(rootViewController: vc)
+        
+        //设置tabbar的图标
+        nav.tabBarItem.image = UIImage(named: imageName )?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+        nav.tabBarItem.selectedImage = UIImage(named: imageName + "_highlighted")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+        
+        //设置tabbar的标题
+        nav.tabBarItem.title = title
+        //设置高亮时标题的颜色
+        nav.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.orange], for: .highlighted)
+        //设置tabbar的标题的大小  默认是 12
+        nav.tabBarItem.setTitleTextAttributes([NSFontAttributeName : UIFont.systemFont(ofSize: 13)], for: UIControlState.normal)
+        
         return nav
         
     }
