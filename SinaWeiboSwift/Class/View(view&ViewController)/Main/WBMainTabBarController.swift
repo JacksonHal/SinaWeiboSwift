@@ -37,6 +37,13 @@ extension WBMainTabBarController {
         for dict in array {
             mArray.append(controller(dict: dict))
         }
+        
+        //设置tabbar的标题的属性 方法一：
+        /*
+         UITabBarItem.appearance().setTitleTextAttributes([NSFontAttributeName : UIFont.systemFont(ofSize: 14)], for: UIControlState.normal)
+         UITabBarItem.appearance().setTitleTextAttributes([NSFontAttributeName : UIFont.systemFont(ofSize: 14), NSForegroundColorAttributeName : UIColor.orange], for: UIControlState.selected)
+         */
+        
         viewControllers = mArray
         
         
