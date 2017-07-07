@@ -96,8 +96,8 @@
     [btn setTitle:title forState:UIControlStateNormal];
     [btn setTitleColor:titleColor forState:UIControlStateNormal];
     btn.titleLabel.font = font;
-    [btn setBackgroundImage:ImageNamed(imgBgName) forState:UIControlStateNormal];
-    [btn setImage:ImageNamed(imgName) forState:UIControlStateNormal];
+    [btn setBackgroundImage:[UIImage imageNamed:imgBgName] forState:UIControlStateNormal];
+    [btn setImage:[UIImage imageNamed:imgName] forState:UIControlStateNormal];
     [superView addSubview:btn];
     return btn;
     
@@ -131,7 +131,7 @@
  */
 + (UIImageView *)createImageViewWithFrame:(CGRect)frame imageName:(NSString *)imageName superView:(UIView *)superView{
     UIImageView *imv = [[UIImageView alloc]initWithFrame:frame];
-    [imv setImage:ImageNamed(imageName)];
+    [imv setImage:[UIImage imageNamed:imageName]];
     [superView addSubview:imv];
     return imv;
 }
@@ -149,7 +149,7 @@
 + (UIImageView *)bgImageViewWithNoData:(NSMutableArray *)arrDataResult frame:(CGRect)frame strNoDataImage:(NSString *)strNoDataImage superView:(UIView *)superView{
     if (arrDataResult.count > 0) {
         UIImageView *imvBg = [[UIImageView alloc]initWithFrame:frame];
-        [imvBg setImage:ImageNamed(strNoDataImage)];
+        [imvBg setImage:[UIImage imageNamed:strNoDataImage]];
         [superView addSubview:imvBg];
         return imvBg;
     }else{
@@ -166,7 +166,7 @@
  */
 + (UIView *)leftViewWithFrame:(CGRect)frame LeftImage:(NSString *)strImageName{
     UIView *leftView = [[UIView alloc]initWithFrame:frame];
-    UIImage *imgIcon = ImageNamed(strImageName);
+    UIImage *imgIcon = [UIImage imageNamed:strImageName];
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, imgIcon.size.width, imgIcon.size.height)];
     imageView.center = leftView.center;
     imageView.image = imgIcon;
@@ -205,7 +205,7 @@
     // Setup the path
     CGMutablePathRef path = CGPathCreateMutable();
     CGPathMoveToPoint(path, NULL, originX, originY);
-    CGPathAddLineToPoint(path, NULL, SCREEN_WIDTH,originY);
+    CGPathAddLineToPoint(path, NULL, [UIScreen mainScreen].bounds.size.width,originY);
     
     [shapeLayer setPath:path];
     CGPathRelease(path);

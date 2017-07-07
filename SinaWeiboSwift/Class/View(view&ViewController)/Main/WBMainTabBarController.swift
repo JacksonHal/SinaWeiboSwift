@@ -14,7 +14,21 @@ class WBMainTabBarController: UITabBarController {
         super.viewDidLoad()
 
         setupChildViewControllers()
+        setComposeBtn()
     }
+    
+    //@objc作用   能够允许该函数在“运行时” 通过OC 的消息转发机制被调用
+    @objc fileprivate func composeClick(btn : UIButton) {
+        print("撰写方法")
+    }
+    
+    /// 懒加载
+    lazy var composeBtn : UIButton = {
+        let composeBtn : UIButton = UIButton()
+        composeBtn.setBackgroundImage(UIImage(named: "tabbar_compose_button_highlighted"), for: UIControlState.normal)
+        composeBtn.setImage(UIImage(named: "tabbar_compose_icon_add"), for: UIControlState.normal)
+        return composeBtn
+    }()
 
 }
 
@@ -25,11 +39,29 @@ class WBMainTabBarController: UITabBarController {
 // MARK: - 设置界面
 extension WBMainTabBarController {
     
-    //设置所有的控制器
-     func setupChildViewControllers() {
+    
+    /// 设置撰写按钮
+    fileprivate func setComposeBtn() {
+        
+        tabBar.addSubview(composeBtn)
+        //tabbar上按钮的个数
+        let count = CGFloat(childViewControllers.count)
+        //按钮的宽度
+        let w = tabBar.bounds.width/count - 1
+        //CGRectInSet    正数向内缩进，负数想外扩展  注意：这一步非常有必要
+        composeBtn.frame = tabBar.bounds.insetBy(dx: 2*w, dy: 0)
+        print(composeBtn.frame.width)
+        
+        composeBtn.addTarget(self, action:#selector(composeClick(btn:)), for: UIControlEvents.touchUpInside)
+        
+    }
+    
+    /// 设置所有的控制器
+    fileprivate func setupChildViewControllers() {
         let array = [
             ["clsName":"WBHomeViewController", "title":"首页", "imageName":"tabbar_home"],
             ["clsName":"WBMessageViewController", "title":"消息", "imageName":"tabbar_message_center" ],
+            ["clsName":""],
             ["clsName":"WBDiscoverViewController", "title":"发现", "imageName":"tabbar_discover"],
             ["clsName":"WBMineViewController", "title":"我", "imageName":"tabbar_profile", "selectImageName":"tabbar_profile_highlighted"]
         ]
