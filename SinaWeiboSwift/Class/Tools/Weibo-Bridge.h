@@ -8,3 +8,5 @@
 
 #import "UIView+Additions.h"
 #import "UIKitFactory.h"
+#import "UIScreen+Addition.h"
+#import "UIColor+Addition.h"

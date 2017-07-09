@@ -25,7 +25,10 @@ class WBHomeViewController: WBBaseViewController {
     
     override func setupUI() {
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "添加朋友", style: UIBarButtonItemStyle.plain, target: self, action: #selector(addFriend(btn:)))
+        //重写父类的方法
+        super.setupUI()
+        
+        navItem.leftBarButtonItem = UIBarButtonItem.init(width: 65, title: "添加好友", normalColor: UIColor.darkGray, highlightColor: UIColor.orange, fontSize: 15.0, target: self, action: #selector(addFriend(btn:)))
         
     }
 }

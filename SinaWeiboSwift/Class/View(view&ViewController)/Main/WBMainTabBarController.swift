@@ -108,7 +108,7 @@ extension WBMainTabBarController {
         //设置tabbar的标题
         nav.tabBarItem.title = title
         //设置高亮时标题的颜色
-        nav.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.orange], for: .highlighted)
+        nav.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.init(red: 1.0, green: 0.51, blue: 0.0, alpha: 1.0)], for: .highlighted)
         //设置tabbar的标题的大小  默认是 12
         nav.tabBarItem.setTitleTextAttributes([NSFontAttributeName : UIFont.systemFont(ofSize: 13)], for: UIControlState.normal)
         
