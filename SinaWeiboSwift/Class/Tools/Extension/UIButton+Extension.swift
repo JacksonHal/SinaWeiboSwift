@@ -22,19 +22,30 @@ extension UIBarButtonItem {
     ///   - fontSize: fontSize  默认为16号字体
     ///   - target: target
     ///   - selector: action
-    convenience init(width:CGFloat, title:String, normalColor:UIColor, highlightColor:UIColor, fontSize:CGFloat = 16, target:AnyObject?, action:Selector) {
+    ///   - isBack: 是否是返回按钮
+    convenience init(width:CGFloat, title:String, normalColor:UIColor, highlightColor:UIColor, fontSize:CGFloat = 16, target:AnyObject?, action:Selector, isBack:Bool) {
         
-        let leftBtn = UIButton.init()
-        leftBtn.setWidth(width)
-        leftBtn.titleLabel?.font = UIFont.systemFont(ofSize: fontSize)
-        leftBtn.setTitle(title, for: UIControlState.normal)
-        leftBtn.setTitleColor(normalColor, for: UIControlState.normal)
-        leftBtn.setTitleColor(highlightColor, for: UIControlState.highlighted)
-        leftBtn.addTarget(target, action: action, for: UIControlEvents.touchUpInside)
+        let barBtn = UIButton.init()
+        //leftBtn.setWidth(width)
+        barBtn.titleLabel?.font = UIFont.systemFont(ofSize: fontSize)
+        barBtn.setTitle(title, for: UIControlState.normal)
+        barBtn.setTitleColor(normalColor, for: UIControlState.normal)
+        barBtn.setTitleColor(highlightColor, for: UIControlState.highlighted)
+        barBtn.addTarget(target, action: action, for: UIControlEvents.touchUpInside)
+        
+        if isBack == true {
+            let imageName : String = "navigationbar_back_withtext"
+            
+            barBtn.setImage(UIImage.init(named: imageName), for: UIControlState.normal);
+            barBtn.setImage(UIImage.init(named: imageName + "_highlighted"), for: UIControlState.highlighted);
+            barBtn.sizeToFit();
+        }
+        
+        barBtn.sizeToFit()
         
         ///只有在使用便利函数时才会self调用init方法
         //self.init 实例化UIBarButtonItem对象
-        self.init(customView:leftBtn)
+        self.init(customView:barBtn)
         
     }
     

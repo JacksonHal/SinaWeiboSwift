@@ -31,6 +31,6 @@ extension TestViewController {
         super.setupUI()
         
         
-        navItem.rightBarButtonItem = UIBarButtonItem.init(width: 50, title: "下一个", normalColor: UIColor.darkGray, highlightColor: UIColor.orange, fontSize: 15.0, target: self, action: #selector(nextViewController))
+        navItem.rightBarButtonItem = UIBarButtonItem.init(width: 50, title: "下一个", normalColor: UIColor.darkGray, highlightColor: UIColor.orange, fontSize: 15.0, target: self, action: #selector(nextViewController), isBack:false)
     }
 }

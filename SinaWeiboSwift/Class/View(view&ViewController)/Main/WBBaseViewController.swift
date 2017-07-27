@@ -45,5 +45,8 @@ extension WBBaseViewController  {
         
         //设置navigationBar的渲染颜色
         navigationBar.barTintColor = UIColor.hj_RGBColor(0xF6F6F6)
+        
+        //设置navigationBar的title的颜色  深灰色
+        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.darkGray];
     }
 }

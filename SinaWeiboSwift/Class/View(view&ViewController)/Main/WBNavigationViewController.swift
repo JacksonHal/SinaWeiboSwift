@@ -36,7 +36,7 @@ class WBNavigationViewController: UINavigationController {
                 }
                 
                 //取出自定义的navItem
-                vc.navItem.leftBarButtonItem = UIBarButtonItem(width: 40, title: title!, normalColor: UIColor.darkGray, highlightColor: UIColor.orange, fontSize: 15.0, target: self, action: #selector(popViewController(animated:)))
+                vc.navItem.leftBarButtonItem = UIBarButtonItem(width: 40, title: title!, normalColor: UIColor.darkGray, highlightColor: UIColor.orange, fontSize: 15.0, target: self, action: #selector(popViewController(animated:)), isBack:true)
             
             }
         }
