@@ -17,9 +17,26 @@ class WBMainTabBarController: UITabBarController {
         setComposeBtn()
     }
     
+    /**
+     portrait : 横屏
+     landscape: 竖屏
+     */
+    /// 视屏幕支持横屏
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+    
     //@objc作用   能够允许该函数在“运行时” 通过OC 的消息转发机制被调用
     @objc fileprivate func composeClick(btn : UIButton) {
         print("撰写方法")
+        
+        /*
+         测试横屏代码：方向旋转
+        let vc = UIViewController()
+        vc.view.backgroundColor = UIColor.orange
+        let nav = UINavigationController(rootViewController: vc)
+        present(nav, animated: true, completion: nil)
+        */
     }
     
     /// 懒加载

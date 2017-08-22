@@ -215,8 +215,7 @@
 		4DB747071F0A1DEA00F4E383 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				4DB747191F0A244300F4E383 /* WBMainTabBarController.swift */,
-				4DB7470D1F0A206300F4E383 /* WBNavigationViewController.swift */,
+				85AB77591F4C1CDC00DB3E25 /* 主控制器 */,
 				4DB7470F1F0A20BE00F4E383 /* WBBaseViewController.swift */,
 			);
 			path = Main;
@@ -294,6 +293,15 @@
 				A64C3A7D1F10CEB5009B68C3 /* NextViewController.swift */,
 			);
 			path = Test;
+			sourceTree = "<group>";
+		};
+		85AB77591F4C1CDC00DB3E25 /* 主控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				4DB747191F0A244300F4E383 /* WBMainTabBarController.swift */,
+				4DB7470D1F0A206300F4E383 /* WBNavigationViewController.swift */,
+			);
+			name = "主控制器";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
