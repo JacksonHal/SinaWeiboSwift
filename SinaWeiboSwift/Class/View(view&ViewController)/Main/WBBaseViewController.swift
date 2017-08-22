@@ -16,8 +16,10 @@ class WBBaseViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
+        loadData()
     }
     
+    /// 表格视图
     var tableview : UITableView?
     
     
@@ -33,10 +35,21 @@ class WBBaseViewController: UIViewController {
             navItem.title = title
         }
     }
+    
+    
+    /// 数据源方法   父类不需要实现，子类需要实现
+    func loadData() {
+        
+    }
 
 }
 
-// MARK: - 设置UI
+
+/*
+ extension 中 不能有属性
+ extension 中 不能重写父类的方法。重写父类的方法是子类的职责，扩展是类的职责
+ */
+// MARK: - 设置UI界面
 extension WBBaseViewController  {
 
     /// 设置UI
