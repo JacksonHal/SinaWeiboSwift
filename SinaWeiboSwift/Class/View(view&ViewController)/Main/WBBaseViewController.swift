@@ -12,16 +12,7 @@ import UIKit
 // MARK: - 各种控制器的基类控制器
 class WBBaseViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        automaticallyAdjustsScrollViewInsets = false
-        
-        //设置UI
-        setupUI()
-        
-        //设置数据源
-        loadData()
-    }
+    
     
     /// 表格视图
     var tableview : UITableView?
@@ -32,14 +23,22 @@ class WBBaseViewController: UIViewController {
     //用户是否登录
     var userLogin = false
     
-    
-    
-    
     //自定义导航条
     lazy var navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: UIScreen.hj_ScreenWidth(), height: 64))
     
     //自定义UINavigationItem  以后设置导航栏内的内容，统一使用navItem（不再使用系统自带的）
     lazy var navItem = UINavigationItem()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        automaticallyAdjustsScrollViewInsets = false
+        
+        //设置UI
+        setupUI()
+        
+        //设置数据源
+        loadData()
+    }
     
     //重写title方法
     override var title: String?{
@@ -59,7 +58,7 @@ class WBBaseViewController: UIViewController {
 
 /*
  extension 中 不能有属性
- extension 中 不能重写父类的方法。重写父类的方法是子类的职责，扩展是类的职责
+ extension 中 不能重写‘父类’的本类的方法。重写父类的方法是子类的职责，扩展是类的职责
  */
 // MARK: - 设置UI界面
 extension WBBaseViewController  {
