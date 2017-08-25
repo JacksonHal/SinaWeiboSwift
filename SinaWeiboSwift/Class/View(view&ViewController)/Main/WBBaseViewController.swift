@@ -15,7 +15,11 @@ class WBBaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         automaticallyAdjustsScrollViewInsets = false
+        
+        //设置UI
         setupUI()
+        
+        //设置数据源
         loadData()
     }
     
@@ -24,6 +28,10 @@ class WBBaseViewController: UIViewController {
     
     //刷新控件
     var refreshController : UIRefreshControl?
+    
+    //用户是否登录
+    var userLogin = false
+    
     
     
     
@@ -43,7 +51,7 @@ class WBBaseViewController: UIViewController {
     
     /// 数据源方法   父类不需要实现，子类需要实现
     func loadData() {
-        
+        refreshController?.endRefreshing()
     }
 
 }
@@ -59,11 +67,15 @@ extension WBBaseViewController  {
     /// 设置UI
     func setupUI() {
         
-        view.backgroundColor = UIColor.blue
+        view.backgroundColor = UIColor.white
         
         ///设置导航条
         setNavigationBar()
+        ///添加表格视图
         setupTableView()
+        ///添加访客视图
+        userLogin ? setupTableView() : setVisitorView()
+        
     }
     
     func setupTableView() {
@@ -73,7 +85,9 @@ extension WBBaseViewController  {
         view.insertSubview(tableview!, belowSubview: navigationBar)
         tableview?.contentInset = UIEdgeInsetsMake(navigationBar.bounds.height, 0, tabBarController?.tabBar.bounds.size.height ?? 49, 0)
         
-        
+        refreshController = UIRefreshControl()
+        tableview?.addSubview(refreshController!)
+        refreshController?.addTarget(self, action: #selector(loadData), for: UIControlEvents.valueChanged)
         
         
     }
@@ -92,6 +106,15 @@ extension WBBaseViewController  {
         
         //设置navigationBar的title的颜色  深灰色
         navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.darkGray];
+    }
+    
+    func setVisitorView() {
+        let visitorView = WBVisitorView(frame: view.bounds)
+        
+        //visitorView.backgroundColor = UIColor.yellow
+        
+        view .insertSubview(visitorView, belowSubview: navigationBar)
+        
     }
 }
 

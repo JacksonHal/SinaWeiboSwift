@@ -23,6 +23,7 @@
 		4DB749151F0F335B00F4E383 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB749121F0F335B00F4E383 /* UIView+Additions.m */; };
 		4DB7491A1F0F593600F4E383 /* UIKitFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB749191F0F593600F4E383 /* UIKitFactory.m */; };
 		4DB7491D1F0F8B8700F4E383 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB7491C1F0F8B8700F4E383 /* TestViewController.swift */; };
+		85AB775E1F501DEA00DB3E25 /* WBVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AB775D1F501DEA00DB3E25 /* WBVisitorView.swift */; };
 		A64C3A7E1F10CEB5009B68C3 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64C3A7D1F10CEB5009B68C3 /* NextViewController.swift */; };
 		A64C3A801F111D2E009B68C3 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64C3A7F1F111D2E009B68C3 /* UIButton+Extension.swift */; };
 		A64C3A831F11CE1F009B68C3 /* UIScreen+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = A64C3A821F11CE1F009B68C3 /* UIScreen+Addition.m */; };
@@ -72,6 +73,7 @@
 		4DB749181F0F593600F4E383 /* UIKitFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIKitFactory.h; sourceTree = "<group>"; };
 		4DB749191F0F593600F4E383 /* UIKitFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIKitFactory.m; sourceTree = "<group>"; };
 		4DB7491C1F0F8B8700F4E383 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		85AB775D1F501DEA00DB3E25 /* WBVisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBVisitorView.swift; sourceTree = "<group>"; };
 		A64C3A7D1F10CEB5009B68C3 /* NextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		A64C3A7F1F111D2E009B68C3 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		A64C3A811F11CE1F009B68C3 /* UIScreen+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+Addition.h"; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				85AB77591F4C1CDC00DB3E25 /* 主控制器 */,
+				85AB775C1F501DA900DB3E25 /* VisitorView */,
 				4DB7470F1F0A20BE00F4E383 /* WBBaseViewController.swift */,
 			);
 			path = Main;
@@ -302,6 +305,14 @@
 				4DB7470D1F0A206300F4E383 /* WBNavigationViewController.swift */,
 			);
 			name = "主控制器";
+			sourceTree = "<group>";
+		};
+		85AB775C1F501DA900DB3E25 /* VisitorView */ = {
+			isa = PBXGroup;
+			children = (
+				85AB775D1F501DEA00DB3E25 /* WBVisitorView.swift */,
+			);
+			path = VisitorView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -451,6 +462,7 @@
 				A64C3A7E1F10CEB5009B68C3 /* NextViewController.swift in Sources */,
 				4DB747121F0A20EB00F4E383 /* WBHomeViewController.swift in Sources */,
 				4DB7471A1F0A244300F4E383 /* WBMainTabBarController.swift in Sources */,
+				85AB775E1F501DEA00DB3E25 /* WBVisitorView.swift in Sources */,
 				4DB7470E1F0A206300F4E383 /* WBNavigationViewController.swift in Sources */,
 				4DB749151F0F335B00F4E383 /* UIView+Additions.m in Sources */,
 				4DB7491D1F0F8B8700F4E383 /* TestViewController.swift in Sources */,
