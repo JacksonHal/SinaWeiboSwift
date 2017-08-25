@@ -14,13 +14,17 @@ class WBBaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        automaticallyAdjustsScrollViewInsets = false
         setupUI()
         loadData()
     }
     
     /// 表格视图
     var tableview : UITableView?
+    
+    //刷新控件
+    var refreshController : UIRefreshControl?
+    
     
     
     //自定义导航条
@@ -67,6 +71,11 @@ extension WBBaseViewController  {
         tableview?.delegate = self
         tableview?.dataSource = self
         view.insertSubview(tableview!, belowSubview: navigationBar)
+        tableview?.contentInset = UIEdgeInsetsMake(navigationBar.bounds.height, 0, tabBarController?.tabBar.bounds.size.height ?? 49, 0)
+        
+        
+        
+        
     }
     
     /// 设置导航条
