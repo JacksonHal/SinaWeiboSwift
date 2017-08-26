@@ -21,16 +21,24 @@ class WBVisitorView: UIView {
     }
     
     ///private 属性
-    private lazy var iconImageView : UIImageView = UIImageView(image: UIImage(named: "visitordiscover_feed_image_smallicon"))
+    lazy var iconImageView : UIImageView = UIImageView(image: UIImage(named: "visitordiscover_feed_image_smallicon"))
     //小房子
-    private lazy var houseImageView : UIImageView = UIImageView(image: UIImage(named: "visitordiscover_feed_image_house"))
+    lazy var houseImageView : UIImageView = UIImageView(image: UIImage(named: "visitordiscover_feed_image_house"))
     //提示标签
-    private lazy var reminderLabel : UILabel = UILabel.cz_label(withText: "关注一些人，回这里看看有什么惊喜关注一些人，回这里看看有什么惊喜", fontSize: 14, color: UIColor.darkGray)
+    lazy var reminderLabel : UILabel = UILabel.cz_label(withText: "关注一些人，回这里看看有什么惊喜关注一些人，回这里看看有什么惊喜",fontSize: 14,color: UIColor.darkGray)
     //注册按钮
-    private lazy var registerBtn : UIButton = UIButton.cz_textButton("注册", fontSize: 15, normalColor: UIColor.orange, highlightedColor: UIColor.black, backgroundImageName: "common_button_white_disable")
+    lazy var registerBtn : UIButton = UIButton.cz_textButton("注册",
+                                                                     fontSize: 15,
+                                                                     normalColor: UIColor.orange,
+                                                                     highlightedColor: UIColor.black,
+                                                                     backgroundImageName: "common_button_white_disable")
     
     //登录按钮
-    private lazy var loginBtn : UIButton = UIButton.cz_textButton("登录", fontSize: 15, normalColor: UIColor.orange, highlightedColor: UIColor.black, backgroundImageName: "common_button_white_disable")
+    lazy var loginBtn : UIButton = UIButton.cz_textButton("登录",
+                                                                  fontSize: 15,
+                                                                  normalColor: UIColor.orange,
+                                                                  highlightedColor: UIColor.black,
+                                                                  backgroundImageName: "common_button_white_disable")
     
     
     
@@ -43,5 +51,115 @@ class WBVisitorView: UIView {
 extension WBVisitorView {
     func setUI() {
         backgroundColor = UIColor.white
+        
+        addSubview(iconImageView)
+        addSubview(houseImageView)
+        addSubview(reminderLabel)
+        addSubview(registerBtn)
+        addSubview(loginBtn)
+        
+        //取消autoresizing
+        for v in subviews {
+            v.translatesAutoresizingMaskIntoConstraints = false
+        }
+        //添加自动布局
+        //iconImageView
+        addConstraint(NSLayoutConstraint(item: iconImageView,
+                                         attribute: NSLayoutAttribute.centerX,
+                                         relatedBy: NSLayoutRelation.equal,
+                                         toItem: self, attribute: NSLayoutAttribute.centerX,
+                                         multiplier: 1.0,
+                                         constant: 0))
+        addConstraint(NSLayoutConstraint(item: iconImageView,
+                                         attribute: NSLayoutAttribute.centerY,
+                                         relatedBy: NSLayoutRelation.equal,
+                                         toItem: self,
+                                         attribute: NSLayoutAttribute.centerY,
+                                         multiplier: 1.0,
+                                         constant: 0))
+        //iconImageView
+        addConstraint(NSLayoutConstraint(item: houseImageView,
+                                         attribute: NSLayoutAttribute.centerX,
+                                         relatedBy: NSLayoutRelation.equal,
+                                         toItem: iconImageView,
+                                         attribute: NSLayoutAttribute.centerX,
+                                         multiplier: 1.0,
+                                         constant: 0))
+        addConstraint(NSLayoutConstraint(item: houseImageView,
+                                         attribute: NSLayoutAttribute.centerY,
+                                         relatedBy: NSLayoutRelation.equal,
+                                         toItem: iconImageView,
+                                         attribute: NSLayoutAttribute.centerY,
+                                         multiplier: 1.0,
+                                         constant: 0))
+        //iconImageView
+        addConstraint(NSLayoutConstraint(item: reminderLabel,
+                                         attribute: NSLayoutAttribute.centerX,
+                                         relatedBy: NSLayoutRelation.equal,
+                                         toItem: self,
+                                         attribute: NSLayoutAttribute.centerX,
+                                         multiplier: 1.0,
+                                         constant: 0))
+        addConstraint(NSLayoutConstraint(item: reminderLabel,
+                                         attribute: NSLayoutAttribute.top,
+                                         relatedBy: NSLayoutRelation.equal,
+                                         toItem: iconImageView,
+                                         attribute: NSLayoutAttribute.bottom,
+                                         multiplier: 1.0,
+                                         constant: 5))
+        addConstraint(NSLayoutConstraint(item: reminderLabel,
+                                         attribute: NSLayoutAttribute.width,
+                                         relatedBy: NSLayoutRelation.equal,
+                                         toItem: nil,
+                                         attribute: NSLayoutAttribute.notAnAttribute,
+                                         multiplier: 1.0,
+                                         constant: 236))
+        //registerBtn
+        addConstraint(NSLayoutConstraint(item: registerBtn,
+                                         attribute: NSLayoutAttribute.left,
+                                         relatedBy: NSLayoutRelation.equal,
+                                         toItem: reminderLabel,
+                                         attribute: NSLayoutAttribute.left,
+                                         multiplier: 1.0,
+                                         constant: 0))
+        addConstraint(NSLayoutConstraint(item: registerBtn,
+                                         attribute: NSLayoutAttribute.top,
+                                         relatedBy: NSLayoutRelation.equal,
+                                         toItem: reminderLabel,
+                                         attribute: NSLayoutAttribute.bottom,
+                                         multiplier: 1.0,
+                                         constant: 5))
+        addConstraint(NSLayoutConstraint(item: registerBtn,
+                                         attribute: NSLayoutAttribute.width,
+                                         relatedBy: NSLayoutRelation.equal,
+                                         toItem: nil,
+                                         attribute: NSLayoutAttribute.notAnAttribute,
+                                         multiplier: 1.0,
+                                         constant: 80))
+        
+        //loginBtn
+        addConstraint(NSLayoutConstraint(item: loginBtn,
+                                         attribute: NSLayoutAttribute.right,
+                                         relatedBy: NSLayoutRelation.equal,
+                                         toItem: reminderLabel,
+                                         attribute: NSLayoutAttribute.right,
+                                         multiplier: 1.0,
+                                         constant: 0))
+        addConstraint(NSLayoutConstraint(item: loginBtn,
+                                         attribute: NSLayoutAttribute.top,
+                                         relatedBy: NSLayoutRelation.equal,
+                                         toItem: registerBtn,
+                                         attribute: NSLayoutAttribute.top,
+                                         multiplier: 1.0,
+                                         constant: 0))
+        addConstraint(NSLayoutConstraint(item: loginBtn,
+                                         attribute: NSLayoutAttribute.width,
+                                         relatedBy: NSLayoutRelation.equal,
+                                         toItem: registerBtn,
+                                         attribute: NSLayoutAttribute.width,
+                                         multiplier: 1.0,
+                                         constant: 0))
+        
+        
     }
 }
