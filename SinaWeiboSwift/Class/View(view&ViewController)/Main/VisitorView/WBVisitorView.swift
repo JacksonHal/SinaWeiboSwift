@@ -22,6 +22,8 @@ class WBVisitorView: UIView {
     
     ///private 属性
     lazy var iconImageView : UIImageView = UIImageView(image: UIImage(named: "visitordiscover_feed_image_smallicon"))
+    //遮掩图像
+    lazy var maskIconImageView : UIImageView = UIImageView(image: UIImage(named: "visitordiscover_feed_mask_smallicon"))
     //小房子
     lazy var houseImageView : UIImageView = UIImageView(image: UIImage(named: "visitordiscover_feed_image_house"))
     //提示标签
@@ -53,6 +55,7 @@ extension WBVisitorView {
         backgroundColor = UIColor.white
         
         addSubview(iconImageView)
+        addSubview(maskIconImageView)
         addSubview(houseImageView)
         addSubview(reminderLabel)
         addSubview(registerBtn)
@@ -128,7 +131,7 @@ extension WBVisitorView {
                                          toItem: reminderLabel,
                                          attribute: NSLayoutAttribute.bottom,
                                          multiplier: 1.0,
-                                         constant: 5))
+                                         constant: 10))
         addConstraint(NSLayoutConstraint(item: registerBtn,
                                          attribute: NSLayoutAttribute.width,
                                          relatedBy: NSLayoutRelation.equal,
@@ -159,6 +162,36 @@ extension WBVisitorView {
                                          attribute: NSLayoutAttribute.width,
                                          multiplier: 1.0,
                                          constant: 0))
+        //maskIconImageView
+        addConstraint(NSLayoutConstraint(item: maskIconImageView,
+                                         attribute: NSLayoutAttribute.left,
+                                         relatedBy: NSLayoutRelation.equal,
+                                         toItem: self,
+                                         attribute: NSLayoutAttribute.left,
+                                         multiplier: 1.0,
+                                         constant: 0))
+        addConstraint(NSLayoutConstraint(item: maskIconImageView,
+                                         attribute: NSLayoutAttribute.right,
+                                         relatedBy: NSLayoutRelation.equal,
+                                         toItem: self,
+                                         attribute: NSLayoutAttribute.right,
+                                         multiplier: 1.0,
+                                         constant: 0))
+        addConstraint(NSLayoutConstraint(item: maskIconImageView,
+                                         attribute: NSLayoutAttribute.top,
+                                         relatedBy: NSLayoutRelation.equal,
+                                         toItem: self,
+                                         attribute: NSLayoutAttribute.top,
+                                         multiplier: 1.0,
+                                         constant: 0))
+        addConstraint(NSLayoutConstraint(item: maskIconImageView,
+                                         attribute: NSLayoutAttribute.bottom,
+                                         relatedBy: NSLayoutRelation.equal,
+                                         toItem: registerBtn,
+                                         attribute: NSLayoutAttribute.bottom,
+                                         multiplier: 1.0,
+                                         constant: 0))
+        
         
         
     }
