@@ -10,6 +10,30 @@ import UIKit
 
 class WBVisitorView: UIView {
 
+    
+    /// 设置每个页面未登录时的显示
+    /// 注意：如果是首页  imageName 传空 ""
+    
+    ///设置方法  Public
+    var visitorInfo : [String: String]? {
+        didSet {
+            guard let imageName = visitorInfo?["imageName"],
+                let message = visitorInfo?["message"]
+                else {
+                    return
+            }
+            
+            reminderLabel.text = message
+            
+            if imageName == "" {
+                return
+            }
+            
+            houseImageView.image = UIImage(named: imageName)
+        }
+    }
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -38,7 +62,7 @@ class WBVisitorView: UIView {
     //登录按钮
     lazy var loginBtn : UIButton = UIButton.cz_textButton("登录",
                                                                   fontSize: 15,
-                                                                  normalColor: UIColor.orange,
+                                                                  normalColor: UIColor.darkGray,
                                                                   highlightedColor: UIColor.black,
                                                                   backgroundImageName: "common_button_white_disable")
     

@@ -23,6 +23,11 @@ class WBBaseViewController: UIViewController {
     //用户是否登录
     var userLogin = false
     
+    
+    /// 访客视图的内容配置信息
+    var visitorInfo : [String: String]?
+    
+    
     //自定义导航条
     lazy var navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: UIScreen.hj_ScreenWidth(), height: 64))
     
@@ -52,6 +57,8 @@ class WBBaseViewController: UIViewController {
     func loadData() {
         refreshController?.endRefreshing()
     }
+    
+    
 
 }
 
