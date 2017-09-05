@@ -111,9 +111,26 @@ extension WBMainTabBarController {
                 return UIViewController();
         }
         
+        let visitorInfo : [String : String]?
+        switch clsName {
+        case "WBHomeViewController":
+            visitorInfo = ["imageName":"", "message":"关注一些人，回这里看看有什么惊喜"]
+        case "WBMessageViewController":
+            visitorInfo = ["imageName":"visitordiscover_image_message", "message":"登录后，别人评论你的微博，发给你的消息，都会在这里收到通知"]
+        case "WBDiscoverViewController":
+            visitorInfo = ["imageName":"discover", "message":"登陆后，最新、最热微博尽在掌握，不再会与事实潮流擦肩而过"]
+        case "WBMineViewController":
+            visitorInfo = ["imageName":"visitordiscover_image_profile", "message":"登录后，你的w微博，相册，个人资料会显示在这里，展示给别人"]
+        default:
+            visitorInfo = nil
+        }
+        
+        
         //创建控制器
         let vc = cls.init()
         vc.title = title
+        
+        (vc as! WBBaseViewController).visitorInfo = visitorInfo
         
         //创建navigationController
         let nav = WBNavigationViewController(rootViewController: vc)

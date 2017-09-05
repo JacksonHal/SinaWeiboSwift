@@ -29,7 +29,9 @@ class WBVisitorView: UIView {
                 return
             }
             
-            houseImageView.image = UIImage(named: imageName)
+            iconImageView.image = UIImage(named: imageName)
+            houseImageView.isHidden = true
+            maskIconImageView.isHidden = true
         }
     }
     
@@ -211,7 +213,7 @@ extension WBVisitorView {
         addConstraint(NSLayoutConstraint(item: maskIconImageView,
                                          attribute: NSLayoutAttribute.bottom,
                                          relatedBy: NSLayoutRelation.equal,
-                                         toItem: registerBtn,
+                                         toItem: self,
                                          attribute: NSLayoutAttribute.bottom,
                                          multiplier: 1.0,
                                          constant: 0))

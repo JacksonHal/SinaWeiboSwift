@@ -25,7 +25,7 @@ class WBBaseViewController: UIViewController {
     
     
     /// 访客视图的内容配置信息
-    var visitorInfo : [String: String]?
+    public var visitorInfo : [String: String]?
     
     
     //自定义导航条
@@ -118,6 +118,7 @@ extension WBBaseViewController  {
         let visitorView = WBVisitorView(frame: view.bounds)
         
         //visitorView.backgroundColor = UIColor.yellow
+        visitorView.visitorInfo = visitorInfo
         
         view .insertSubview(visitorView, belowSubview: navigationBar)
         
