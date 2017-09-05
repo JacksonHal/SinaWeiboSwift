@@ -118,7 +118,7 @@ extension WBMainTabBarController {
         case "WBMessageViewController":
             visitorInfo = ["imageName":"visitordiscover_image_message", "message":"登录后，别人评论你的微博，发给你的消息，都会在这里收到通知"]
         case "WBDiscoverViewController":
-            visitorInfo = ["imageName":"discover", "message":"登陆后，最新、最热微博尽在掌握，不再会与事实潮流擦肩而过"]
+            visitorInfo = ["imageName":"visitordiscover_image_message", "message":"登陆后，最新、最热微博尽在掌握，不再会与事实潮流擦肩而过"]
         case "WBMineViewController":
             visitorInfo = ["imageName":"visitordiscover_image_profile", "message":"登录后，你的w微博，相册，个人资料会显示在这里，展示给别人"]
         default:

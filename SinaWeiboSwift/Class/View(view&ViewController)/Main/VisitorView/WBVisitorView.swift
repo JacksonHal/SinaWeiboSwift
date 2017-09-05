@@ -26,10 +26,15 @@ class WBVisitorView: UIView {
             reminderLabel.text = message
             
             if imageName == "" {
+                
+                //设置首页访客视图动画
+                startAnimation()
                 return
             }
             
             iconImageView.image = UIImage(named: imageName)
+            
+            //隐藏遮掩视图
             houseImageView.isHidden = true
             maskIconImageView.isHidden = true
         }
@@ -40,6 +45,19 @@ class WBVisitorView: UIView {
         super.init(frame: frame)
         
         setUI()
+        
+    }
+    
+    
+    /// 设置首页访客视图动画
+    private func startAnimation() {
+        let animation = CABasicAnimation(keyPath: "transform.rotation")
+        animation.toValue = 2 * Double.pi
+        animation.repeatCount = MAXFLOAT
+        animation.duration = 15
+        animation.isRemovedOnCompletion = false
+        iconImageView.layer.add(animation, forKey: nil)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -86,6 +104,9 @@ extension WBVisitorView {
         addSubview(reminderLabel)
         addSubview(registerBtn)
         addSubview(loginBtn)
+        
+        //提示文字居中
+        reminderLabel.textAlignment = .center
         
         //取消autoresizing
         for v in subviews {
@@ -157,7 +178,7 @@ extension WBVisitorView {
                                          toItem: reminderLabel,
                                          attribute: NSLayoutAttribute.bottom,
                                          multiplier: 1.0,
-                                         constant: 10))
+                                         constant: 20))
         addConstraint(NSLayoutConstraint(item: registerBtn,
                                          attribute: NSLayoutAttribute.width,
                                          relatedBy: NSLayoutRelation.equal,
